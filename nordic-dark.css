@@ -1,82 +1,85 @@
-/* nordic-midnight.css — Nordic Dark variant of Tridactyl's midnight theme */
-
 :root {
-  /* Nord base colors */
-  --nord-bg: #2e3440;        /* nord0 */
-  --nord-surface: #3b4252;   /* nord1 */
-  --nord-highlight: #4c566a; /* nord3 */
-  --nord-fg: #d8dee9;        /* nord4 */
-  --nord-green: #a3be8c;     /* nord14 */
-  --nord-cyan: #88c0d0;      /* nord8 */
-  --nord-red: #bf616a;       /* nord11 */
-  --nord-purple: #b48ead;    /* nord15 */
+  /* Background and foreground */
+  --tridactyl-bg: #2e3440;
+  --tridactyl-fg: #d8dee9;
 
-  /* Tridactyl UI variables — styled like midnight, colored like Nord */
-  --tridactyl-bg: var(--nord-bg);
-  --tridactyl-fg: var(--nord-fg);
+  /* Font settings */
   --tridactyl-font-family: monospace;
+  --tridactyl-font-family-sans: sans-serif;
   --tridactyl-font-size: 15px;
   --tridactyl-small-font-size: 13px;
 
   /* Status bar */
-  --tridactyl-status-bg: var(--nord-surface);
-  --tridactyl-status-fg: var(--nord-fg);
-  --tridactyl-status-border: 0;
-  --tridactyl-status-border-radius: 4px;
+  --tridactyl-status-bg: #3b4252;
+  --tridactyl-status-fg: #d8dee9;
   --tridactyl-status-font-family: var(--tridactyl-font-family);
   --tridactyl-status-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-status-border: 0;
+  --tridactyl-status-border-radius: 4px;
 
   /* Command line */
-  --tridactyl-cmdl-bg: var(--nord-bg);
-  --tridactyl-cmdl-fg: var(--nord-fg);
+  --tridactyl-cmdl-bg: #2e3440;
+  --tridactyl-cmdl-fg: #d8dee9;
   --tridactyl-cmdl-font-family: monospace;
   --tridactyl-cmdl-font-size: var(--tridactyl-font-size);
   --tridactyl-cmdl-line-height: 1.5;
 
   /* Completions */
-  --tridactyl-cmplt-bg: var(--nord-bg);
-  --tridactyl-cmplt-fg: var(--nord-fg);
+  --tridactyl-cmplt-bg: #2e3440;
+  --tridactyl-cmplt-fg: #d8dee9;
   --tridactyl-cmplt-font-family: monospace;
   --tridactyl-cmplt-font-size: var(--tridactyl-small-font-size);
   --tridactyl-cmplt-option-height: 1.6em;
-  --tridactyl-cmplt-border-top: 1px solid var(--nord-highlight);
+  --tridactyl-cmplt-border-top: 1px solid #4c566a;
 
-  /* Hint spans */
-  --tridactyl-hintspan-bg: var(--nord-green);
-  --tridactyl-hintspan-fg: var(--nord-bg);
-  --tridactyl-hintspan-font-weight: bold;
+  /* Headers in completions */
+  --tridactyl-header-first-bg: #3b4252;
+  --tridactyl-header-second-bg: #3b4252;
+  --tridactyl-header-third-bg: #3b4252;
+  --tridactyl-header-font-size: inherit;
+  --tridactyl-header-font-weight: normal;
+  --tridactyl-header-border-bottom: 1px solid #4c566a;
+
+  /* Hints */
+  --tridactyl-hintspan-bg: #a3be8c;
+  --tridactyl-hintspan-fg: #2e3440;
+  --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
   --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-hintspan-font-weight: bold;
   --tridactyl-hintspan-border-width: 0;
 
-  /* Active hint (when typing) */
-  --tridactyl-hint-active-bg: var(--nord-cyan);
-  --tridactyl-hint-active-fg: var(--nord-bg);
+  --tridactyl-hint-bg: none;
+  --tridactyl-hint-outline: 0;
+  --tridactyl-hint-active-bg: #88c0d0;
+  --tridactyl-hint-active-fg: #2e3440;
+  --tridactyl-hint-active-outline: 0;
 
-  /* Visual mode selection box */
-  --tridactyl-vs-bg: var(--nord-surface);
-  --tridactyl-vs-fg: var(--nord-fg);
+  /* Visual mode */
+  --tridactyl-vs-bg: #3b4252;
+  --tridactyl-vs-fg: #d8dee9;
+  --tridactyl-vs-font-family: var(--tridactyl-font-family);
 
-  /* URL styling in completions */
-  --tridactyl-url-fg: var(--nord-cyan);
+  /* URLs in completions */
+  --tridactyl-url-fg: #88c0d0;
+  --tridactyl-url-bg: none;
   --tridactyl-url-text-decoration: none;
+  --tridactyl-url-cursor: pointer;
 
-  /* Header backgrounds in help/completions */
-  --tridactyl-header-first-bg: var(--nord-surface);
-  --tridactyl-header-second-bg: var(--nord-surface);
-  --tridactyl-header-third-bg: var(--nord-surface);
-  --tridactyl-header-border-bottom: 1px solid var(--nord-highlight);
+  /* Accent color (used in some UI elements) */
+  --tridactyl-photon-colours-accent-1: #a3be8c;
 
-  /* Container colors */
-  --tridactyl-container-color-blue: var(--nord-cyan);
-  --tridactyl-container-color-turquoise: var(--nord-cyan);
-  --tridactyl-container-color-green: var(--nord-green);
-  --tridactyl-container-color-yellow: #ebcb8b;
-  --tridactyl-container-color-orange: #d08770;
-  --tridactyl-container-color-red: var(--nord-red);
-  --tridactyl-container-color-pink: var(--nord-red);
-  --tridactyl-container-color-purple: var(--nord-purple);
+  /* Find mode (on-page search) */
+  --tridactyl-of-bg: #3b4252;
+  --tridactyl-of-fg: #d8dee9;
 
-  /* Icons (unchanged) */
+  /* Highlight box (e.g., for :viewsource) */
+  --tridactyl-highlight-box-bg: #3b4252;
+  --tridactyl-highlight-box-fg: #d8dee9;
+
+  /* Scrollbar */
+  --tridactyl-scrollbar-color: auto;
+
+  /* Container icons (do not change) */
   --tridactyl-private-window-icon-url: url("chrome://browser/skin/privateBrowsing.svg");
   --tridactyl-container-fingerprint-url: url("resource://usercontext-content/fingerprint.svg");
   --tridactyl-container-briefcase-url: url("resource://usercontext-content/briefcase.svg");
@@ -91,20 +94,13 @@
   --tridactyl-container-tree-url: url("resource://usercontext-content/tree.svg");
   --tridactyl-container-chill-url: url("resource://usercontext-content/chill.svg");
 
-  /* Scrollbar (optional) */
-  --tridactyl-scrollbar-color: auto;
-}
-
-/* Optional: Override specific elements to match midnight’s clean look */
-.TridactylOwnNamespace .option {
-  border-bottom: 1px solid var(--nord-highlight);
-}
-
-.TridactylOwnNamespace .option:first-child {
-  border-top: 1px solid var(--nord-highlight);
-}
-
-#TridactylStatusIndicator {
-  padding: 4px 8px;
-  margin: 4px;
+  /* Container colors */
+  --tridactyl-container-color-blue: #88c0d0;
+  --tridactyl-container-color-turquoise: #8fbcbb;
+  --tridactyl-container-color-green: #a3be8c;
+  --tridactyl-container-color-yellow: #ebcb8b;
+  --tridactyl-container-color-orange: #d08770;
+  --tridactyl-container-color-red: #bf616a;
+  --tridactyl-container-color-pink: #bf616a;
+  --tridactyl-container-color-purple: #b48ead;
 }
