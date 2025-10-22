@@ -7,5 +7,5 @@ A nord theme for tridactyl.
 Execute the following in tridactyl's command line:
 
 ```
-colourscheme --url https://raw.githubusercontent.com/gator-git/tridactyl/main/default.css nord
+colourscheme --url https://raw.githubusercontent.com/gator-git/tridactyl/main/nordic-dark.css nordic-dark
 ``` 
