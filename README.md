@@ -9,7 +9,7 @@ for nord execute
 ```
 colourscheme --url https://github.com/diecruxible/tridactyl/blob/main/default.css nord
 ``` 
-for nordic-dark execute
+for nordic-midnight execute
 ```
 colourscheme --url https://github.com/diecruxible/tridactyl/blob/main/nordic-midnight.css nordic-midnight
 ``` 
