@@ -11,5 +11,5 @@ colourscheme --url https://github.com/diecruxible/tridactyl/blob/main/default.cs
 ``` 
 for nordic-dark execute
 ```
-colourscheme --url https://github.com/diecruxible/tridactyl/blob/main/nordic-dark.css nordic-dark
+colourscheme --url https://github.com/diecruxible/tridactyl/blob/main/nordic-midnight.css nordic-midnight
 ``` 
