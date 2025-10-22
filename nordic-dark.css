@@ -1,77 +1,82 @@
-:root {
-  /* Nordic Dark (Nord) base colors */
-  --nord-background: #2e3440;    /* nord0 */
-  --nord-foreground: #d8dee9;    /* nord4 */
-  --nord-current-line: #3b4252;  /* nord1 */
-  --nord-comment: #4c566a;       /* nord3 */
-  --nord-black: #3b4252;         /* nord1 (used as dark UI bg) */
-  --nord-red: #bf616a;           /* nord11 */
-  --nord-orange: #d08770;        /* nord12 */
-  --nord-yellow: #ebcb8b;        /* nord13 */
-  --nord-green: #a3be8c;         /* nord14 */
-  --nord-purple: #b48ead;        /* nord15 */
-  --nord-cyan: #88c0d0;          /* nord8 */
-  --nord-pink: #bf616a;          /* nord11 (Nord has no true pink) */
-  --nord-bright-cyan: #8fbcbb;   /* nord7 */
+/* nordic-midnight.css — Nordic Dark variant of Tridactyl's midnight theme */
 
-  /* Tridactyl theme variables — now using Nordic colors */
+:root {
+  /* Nord base colors */
+  --nord-bg: #2e3440;        /* nord0 */
+  --nord-surface: #3b4252;   /* nord1 */
+  --nord-highlight: #4c566a; /* nord3 */
+  --nord-fg: #d8dee9;        /* nord4 */
+  --nord-green: #a3be8c;     /* nord14 */
+  --nord-cyan: #88c0d0;      /* nord8 */
+  --nord-red: #bf616a;       /* nord11 */
+  --nord-purple: #b48ead;    /* nord15 */
+
+  /* Tridactyl UI variables — styled like midnight, colored like Nord */
+  --tridactyl-bg: var(--nord-bg);
+  --tridactyl-fg: var(--nord-fg);
   --tridactyl-font-family: monospace;
-  --tridactyl-font-family-sans: monospace;
-  --tridactyl-font-size: 16px;
-  --tridactyl-small-font-size: 12px;
-  --tridactyl-bg: var(--nord-background);
-  --tridactyl-fg: var(--nord-comment);
-  --tridactyl-scrollbar-color: auto;
+  --tridactyl-font-size: 15px;
+  --tridactyl-small-font-size: 13px;
+
+  /* Status bar */
+  --tridactyl-status-bg: var(--nord-surface);
+  --tridactyl-status-fg: var(--nord-fg);
+  --tridactyl-status-border: 0;
+  --tridactyl-status-border-radius: 4px;
   --tridactyl-status-font-family: var(--tridactyl-font-family);
   --tridactyl-status-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-status-bg: none;
-  --tridactyl-status-fg: var(--nord-foreground);
-  --tridactyl-status-border: 0;
-  --tridactyl-status-border-radius: 6px;
-  --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
-  --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-hintspan-font-weight: bold;
-  --tridactyl-hintspan-fg: var(--nord-black);
-  --tridactyl-hintspan-bg: var(--nord-green);
-  --tridactyl-hintspan-border-width: 0;
-  --tridactyl-hintspan-js-background: var(--nord-red);
-  --tridactyl-hint-bg: none;
-  --tridactyl-hint-outline: 0;
-  --tridactyl-hint-active-fg: none;
-  --tridactyl-hint-active-bg: none;
-  --tridactyl-hint-active-outline: 0;
-  --tridactyl-vs-bg: var(--nord-black);
-  --tridactyl-vs-fg: var(--nord-comment);
-  --tridactyl-vs-font-family: var(--tridactyl-font-family);
-  --tridactyl-cmdl-bg: var(--nord-background);
-  --tridactyl-cmdl-fg: var(--nord-foreground);
-  --tridactyl-cmdl-line-height: 1.6;
-  --tridactyl-cmdl-font-family: monospace;
-  --tridactyl-cmdl-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-cmplt-option-height: 1.4em;
-  --tridactyl-cmplt-fg: var(--nord-comment);
-  --tridactyl-cmplt-bg: var(--nord-background);
-  --tridactyl-cmplt-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-cmplt-font-family: monospace;
-  --tridactyl-cmplt-border-top: 0;
-  --tridactyl-header-first-bg: var(--nord-black);
-  --tridactyl-header-second-bg: var(--nord-black);
-  --tridactyl-header-third-bg: var(--nord-black);
-  --tridactyl-header-font-size: inherit;
-  --tridactyl-header-font-weight: normal;
-  --tridactyl-header-border-bottom: 0;
-  --tridactyl-url-text-decoration: none;
-  --tridactyl-url-fg: var(--nord-green);
-  --tridactyl-url-bg: none;
-  --tridactyl-url-cursor: pointer;
-  --tridactyl-photon-colours-accent-1: var(--nord-green);
-  --tridactyl-of-fg: var(--nord-foreground);
-  --tridactyl-of-bg: var(--nord-current-line);
-  --tridactyl-highlight-box-bg: var(--nord-black);
-  --tridactyl-highlight-box-fg: var(--nord-comment);
-  --tridactyl-photon-colours-in-content-box-border-color: var(--nord-black) !important;
 
-  /* Container icons (unchanged) */
+  /* Command line */
+  --tridactyl-cmdl-bg: var(--nord-bg);
+  --tridactyl-cmdl-fg: var(--nord-fg);
+  --tridactyl-cmdl-font-family: monospace;
+  --tridactyl-cmdl-font-size: var(--tridactyl-font-size);
+  --tridactyl-cmdl-line-height: 1.5;
+
+  /* Completions */
+  --tridactyl-cmplt-bg: var(--nord-bg);
+  --tridactyl-cmplt-fg: var(--nord-fg);
+  --tridactyl-cmplt-font-family: monospace;
+  --tridactyl-cmplt-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-cmplt-option-height: 1.6em;
+  --tridactyl-cmplt-border-top: 1px solid var(--nord-highlight);
+
+  /* Hint spans */
+  --tridactyl-hintspan-bg: var(--nord-green);
+  --tridactyl-hintspan-fg: var(--nord-bg);
+  --tridactyl-hintspan-font-weight: bold;
+  --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
+  --tridactyl-hintspan-border-width: 0;
+
+  /* Active hint (when typing) */
+  --tridactyl-hint-active-bg: var(--nord-cyan);
+  --tridactyl-hint-active-fg: var(--nord-bg);
+
+  /* Visual mode selection box */
+  --tridactyl-vs-bg: var(--nord-surface);
+  --tridactyl-vs-fg: var(--nord-fg);
+
+  /* URL styling in completions */
+  --tridactyl-url-fg: var(--nord-cyan);
+  --tridactyl-url-text-decoration: none;
+
+  /* Header backgrounds in help/completions */
+  --tridactyl-header-first-bg: var(--nord-surface);
+  --tridactyl-header-second-bg: var(--nord-surface);
+  --tridactyl-header-third-bg: var(--nord-surface);
+  --tridactyl-header-border-bottom: 1px solid var(--nord-highlight);
+
+  /* Container colors */
+  --tridactyl-container-color-blue: var(--nord-cyan);
+  --tridactyl-container-color-turquoise: var(--nord-cyan);
+  --tridactyl-container-color-green: var(--nord-green);
+  --tridactyl-container-color-yellow: #ebcb8b;
+  --tridactyl-container-color-orange: #d08770;
+  --tridactyl-container-color-red: var(--nord-red);
+  --tridactyl-container-color-pink: var(--nord-red);
+  --tridactyl-container-color-purple: var(--nord-purple);
+
+  /* Icons (unchanged) */
   --tridactyl-private-window-icon-url: url("chrome://browser/skin/privateBrowsing.svg");
   --tridactyl-container-fingerprint-url: url("resource://usercontext-content/fingerprint.svg");
   --tridactyl-container-briefcase-url: url("resource://usercontext-content/briefcase.svg");
@@ -86,62 +91,20 @@
   --tridactyl-container-tree-url: url("resource://usercontext-content/tree.svg");
   --tridactyl-container-chill-url: url("resource://usercontext-content/chill.svg");
 
-  /* Container colors mapped to Nordic palette */
-  --tridactyl-container-color-blue: var(--nord-cyan);
-  --tridactyl-container-color-turquoise: var(--nord-bright-cyan);
-  --tridactyl-container-color-green: var(--nord-green);
-  --tridactyl-container-color-yellow: var(--nord-yellow);
-  --tridactyl-container-color-orange: var(--nord-orange);
-  --tridactyl-container-color-red: var(--nord-red);
-  --tridactyl-container-color-pink: var(--nord-pink);
-  --tridactyl-container-color-purple: var(--nord-purple);
+  /* Scrollbar (optional) */
+  --tridactyl-scrollbar-color: auto;
 }
 
-/* Optional: Keep existing class-based overrides if needed */
-.TridactylPrivate {
-  background: 0 0 !important;
+/* Optional: Override specific elements to match midnight’s clean look */
+.TridactylOwnNamespace .option {
+  border-bottom: 1px solid var(--nord-highlight);
 }
 
-.TridactylOwnNamespace .option.incognito .privatewindow {
-  fill: var(--nord-comment) !important;
+.TridactylOwnNamespace .option:first-child {
+  border-top: 1px solid var(--nord-highlight);
 }
 
-#trinewtab #nagbar-changelog {
-  background: var(--nord-current-line) !important;
-  color: var(--nord-pink) !important;
-}
-
-#trinewtab input[id^=spoiler] + label {
-  background: var(--nord-comment) !important;
-  color: var(--nord-foreground) !important;
-}
-
-.TridactylOwnNamespace .tsd-flag {
-  background-color: var(--nord-current-line) !important;
-  color: var(--nord-foreground) !important;
-}
-
-.TridactylOwnNamespace .tsd-index-panel h3,
-.TridactylOwnNamespace .tsd-panel,
-.TridactylOwnNamespace .tsd-signature {
-  border-width: 1px !important;
-  border-color: var(--nord-current-line) !important;
-}
-
-.TridactylOwnNamespace .tsd-signature-symbol,
-.TridactylOwnNamespace .tsd-sources {
-  color: var(--nord-current-line) !important;
-}
-
-.TridactylOwnNamespace .hljs-keyword {
-  color: var(--nord-purple) !important;
-}
-
-.TridactylOwnNamespace .hljs-string {
-  color: var(--nord-yellow) !important;
-}
-
-.TridactylOwnNamespace .hljs-comment,
-.TridactylOwnNamespace .hljs-title {
-  color: var(--nord-foreground) !important;
+#TridactylStatusIndicator {
+  padding: 4px 8px;
+  margin: 4px;
 }
