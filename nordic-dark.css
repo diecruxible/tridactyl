@@ -1,106 +1,122 @@
 :root {
-  /* Background and foreground */
-  --tridactyl-bg: #2e3440;
-  --tridactyl-fg: #d8dee9;
+    /* Generic */
+    --tridactyl-font-family: NotoMono Mono Nerd Font;
+    --tridactyl-font-family-sans: NotoMono Mono Nerd Font;
+    --tridactyl-font-size: 32pt;
+    --tridactyl-small-font-size: 18px;
+    --tridactyl-bg: #2e3440;          /* nord0 */
+    --tridactyl-fg: #eceff4;          /* nord6 */
+    --tridactyl-logo: url("moz-extension://__MSG_@@extension_id__/static/logo/Tridactyl_64px.png");
+    --tridactyl-scrollbar-color: auto;
 
-  /* Font settings */
-  --tridactyl-font-family: monospace;
-  --tridactyl-font-family-sans: sans-serif;
-  --tridactyl-font-size: 15px;
-  --tridactyl-small-font-size: 13px;
+    /* Mode indicator */
+    --tridactyl-status-font-family: var(--tridactyl-font-family);
+    --tridactyl-status-font-size: var(--tridactyl-small-font-size);
+    --tridactyl-status-bg: var(--tridactyl-bg);
+    --tridactyl-status-fg: var(--tridactyl-fg);
+    --tridactyl-status-border: 4px #2e3440 solid; /* nord0 */
+    --tridactyl-status-border-radius: 0px;
 
-  /* Status bar */
-  --tridactyl-status-bg: #3b4252;
-  --tridactyl-status-fg: #d8dee9;
-  --tridactyl-status-font-family: var(--tridactyl-font-family);
-  --tridactyl-status-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-status-border: 0;
-  --tridactyl-status-border-radius: 4px;
+    /* Search highlight */
+    --tridactyl-search-highlight-color: #88c0d0; /* nord8 */
 
-  /* Command line */
-  --tridactyl-cmdl-bg: #2e3440;
-  --tridactyl-cmdl-fg: #d8dee9;
-  --tridactyl-cmdl-font-family: monospace;
-  --tridactyl-cmdl-font-size: var(--tridactyl-font-size);
-  --tridactyl-cmdl-line-height: 1.5;
+    /* Hinting */
 
-  /* Completions */
-  --tridactyl-cmplt-bg: #2e3440;
-  --tridactyl-cmplt-fg: #d8dee9;
-  --tridactyl-cmplt-font-family: monospace;
-  --tridactyl-cmplt-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-cmplt-option-height: 1.6em;
-  --tridactyl-cmplt-border-top: 1px solid #4c566a;
+    /* Hint character tags */
+    --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
+    --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
+    --tridactyl-hintspan-font-weight: bold;
+    --tridactyl-hintspan-fg: var(--tridactyl-fg);
+    --tridactyl-hintspan-bg: #5e81ac; /* nord9 */
+    --tridactyl-hintspan-border-color: ButtonShadow;
+    --tridactyl-hintspan-border-width: 0px;
+    --tridactyl-hintspan-border-style: solid;
+    --tridactyl-hintspan-js-background: rgba(46, 52, 64, 0); /* nord0 transparent */
 
-  /* Headers in completions */
-  --tridactyl-header-first-bg: #3b4252;
-  --tridactyl-header-second-bg: #3b4252;
-  --tridactyl-header-third-bg: #3b4252;
-  --tridactyl-header-font-size: inherit;
-  --tridactyl-header-font-weight: normal;
-  --tridactyl-header-border-bottom: 1px solid #4c566a;
+    /* Element highlights */
+    --tridactyl-hint-active-fg: var(--tridactyl-fg);
+    --tridactyl-hint-active-bg: rgba(46, 52, 64, 1); /* nord0 */
+    --tridactyl-hint-active-outline: 1px solid #5e81ac; /* nord9 */
 
-  /* Hints */
-  --tridactyl-hintspan-bg: #a3be8c;
-  --tridactyl-hintspan-fg: #2e3440;
-  --tridactyl-hintspan-font-family: var(--tridactyl-font-family);
-  --tridactyl-hintspan-font-size: var(--tridactyl-small-font-size);
-  --tridactyl-hintspan-font-weight: bold;
-  --tridactyl-hintspan-border-width: 0;
+    --tridactyl-hint-bg: rgba(129, 161, 193, 0); /* nord10 transparent */
+    --tridactyl-hint-outline: 1px solid #5e81ac; /* nord9 */
 
-  --tridactyl-hint-bg: none;
-  --tridactyl-hint-outline: 0;
-  --tridactyl-hint-active-bg: #88c0d0;
-  --tridactyl-hint-active-fg: #2e3440;
-  --tridactyl-hint-active-outline: 0;
+    /* :viewsource */
+    --tridactyl-vs-bg: var(--tridactyl-bg);
+    --tridactyl-vs-fg: var(--tridactyl-fg);
+    --tridactyl-vs-font-family: var(--tridactyl-font-family);
 
-  /* Visual mode */
-  --tridactyl-vs-bg: #3b4252;
-  --tridactyl-vs-fg: #d8dee9;
-  --tridactyl-vs-font-family: var(--tridactyl-font-family);
+    /*commandline*/
 
-  /* URLs in completions */
-  --tridactyl-url-fg: #88c0d0;
-  --tridactyl-url-bg: none;
-  --tridactyl-url-text-decoration: none;
-  --tridactyl-url-cursor: pointer;
+    --tridactyl-cmdl-bg: var(--tridactyl-bg);
+    --tridactyl-cmdl-fg: var(--tridactyl-fg);
+    --tridactyl-cmdl-line-height: 1.5;
+    --tridactyl-cmdl-font-family: monospace;
+    --tridactyl-cmdl-font-size: 9pt;
 
-  /* Accent color (used in some UI elements) */
-  --tridactyl-photon-colours-accent-1: #a3be8c;
+    /*completions*/
 
-  /* Find mode (on-page search) */
-  --tridactyl-of-bg: #3b4252;
-  --tridactyl-of-fg: #d8dee9;
+    --tridactyl-cmplt-option-height: 1.4em;
+    --tridactyl-cmplt-fg: var(--tridactyl-fg);
+    --tridactyl-cmplt-bg: var(--tridactyl-bg);
+    --tridactyl-cmplt-font-size: 10pt;
+    --tridactyl-cmplt-font-family: monospace;
+    /* i don't think 0.5px is redered */
+    --tridactyl-cmplt-border-top: 1px solid #4c566a; /* nord3 */
 
-  /* Highlight box (e.g., for :viewsource) */
-  --tridactyl-highlight-box-bg: #3b4252;
-  --tridactyl-highlight-box-fg: #d8dee9;
+    /*sectionHeader*/
 
-  /* Scrollbar */
-  --tridactyl-scrollbar-color: auto;
+    --tridactyl-header-first-bg: #3b4252; /* nord1 */
+    --tridactyl-header-second-bg: #3b4252; /* nord1 */
+    --tridactyl-header-third-bg: #3b4252; /* nord1 */
+    :root .sectionHeader { background: #3b4252; } /* nord1 */
 
-  /* Container icons (do not change) */
-  --tridactyl-private-window-icon-url: url("chrome://browser/skin/privateBrowsing.svg");
-  --tridactyl-container-fingerprint-url: url("resource://usercontext-content/fingerprint.svg");
-  --tridactyl-container-briefcase-url: url("resource://usercontext-content/briefcase.svg");
-  --tridactyl-container-dollar-url: url("resource://usercontext-content/dollar.svg");
-  --tridactyl-container-cart-url: url("resource://usercontext-content/cart.svg");
-  --tridactyl-container-circle-url: url("resource://usercontext-content/circle.svg");
-  --tridactyl-container-gift-url: url("resource://usercontext-content/gift.svg");
-  --tridactyl-container-vacation-url: url("resource://usercontext-content/vacation.svg");
-  --tridactyl-container-food-url: url("resource://usercontext-content/food.svg");
-  --tridactyl-container-fruit-url: url("resource://usercontext-content/fruit.svg");
-  --tridactyl-container-pet-url: url("resource://usercontext-content/pet.svg");
-  --tridactyl-container-tree-url: url("resource://usercontext-content/tree.svg");
-  --tridactyl-container-chill-url: url("resource://usercontext-content/chill.svg");
+    --tridactyl-header-font-size: inherit;
+    --tridactyl-header-font-weight: bold;
+    /* i don't think 0.5px is redered */
+    --tridactyl-header-border-bottom: 1px solid #4c566a; /* nord3 */
 
-  /* Container colors */
-  --tridactyl-container-color-blue: #88c0d0;
-  --tridactyl-container-color-turquoise: #8fbcbb;
-  --tridactyl-container-color-green: #a3be8c;
-  --tridactyl-container-color-yellow: #ebcb8b;
-  --tridactyl-container-color-orange: #d08770;
-  --tridactyl-container-color-red: #bf616a;
-  --tridactyl-container-color-pink: #bf616a;
-  --tridactyl-container-color-purple: #b48ead;
+    /*url style*/
+
+    --tridactyl-url-text-decoration: none;
+    --tridactyl-url-fg: #81a1c1; /* nord8 */
+    --tridactyl-url-bg: var(--tridactyl-bg);
+    --tridactyl-url-cursor: pointer;
+
+    /*option focused*/
+
+    --tridactyl-of-fg: var(--tridactyl-fg);
+    --tridactyl-of-bg: #434c5e; /* nord2 */
+
+    /*new tab spoiler box*/
+    --tridactyl-highlight-box-bg: #434c5e; /* nord2 */
+    --tridactyl-highlight-box-fg: var(--tridactyl-fg);
+
+    --tridactyl-private-window-icon-url: url("chrome://browser/skin/privatebrowsing/private-browsing.svg");
+
+    --tridactyl-container-fingerprint-url: url("resource://usercontext-content/fingerprint.svg");
+    --tridactyl-container-briefcase-url: url("resource://usercontext-content/briefcase.svg");
+    --tridactyl-container-dollar-url: url("resource://usercontext-content/dollar.svg");
+    --tridactyl-container-cart-url: url("resource://usercontext-content/cart.svg");
+    --tridactyl-container-circle-url: url("resource://usercontext-content/circle.svg");
+    --tridactyl-container-gift-url: url("resource://usercontext-content/gift.svg");
+    --tridactyl-container-vacation-url: url("resource://usercontext-content/vacation.svg");
+    --tridactyl-container-food-url: url("resource://usercontext-content/food.svg");
+    --tridactyl-container-fruit-url: url("resource://usercontext-content/fruit.svg");
+    --tridactyl-container-pet-url: url("resource://usercontext-content/pet.svg");
+    --tridactyl-container-tree-url: url("resource://usercontext-content/tree.svg");
+    --tridactyl-container-chill-url: url("resource://usercontext-content/chill.svg");
+
+    /* Container colors are left as-is since they're Firefox-native and not part of Nord */
+
+    --tridactyl-container-color-blue: #37adff;
+    --tridactyl-container-color-turquoise: #00c79a;
+    --tridactyl-container-color-green: #51cd00;
+    --tridactyl-container-color-yellow: #ffcb00;
+    --tridactyl-container-color-orange: #ff9f00;
+    --tridactyl-container-color-red: #ff613d;
+    --tridactyl-container-color-pink: #ff4bda;
+    --tridactyl-container-color-purple: #af51f5;
+
+    --tridactyl-externaledit-bg: var(--tridactyl-logo) no-repeat center;
 }
